@@ -12,6 +12,10 @@ export class MainMenu {
     private callbacks: MenuCallbacks;
     private _currentScreen: MenuScreen = 'main';
 
+    public get currentScreen(): MenuScreen {
+        return this._currentScreen;
+    }
+
     constructor(callbacks: MenuCallbacks) {
         this.callbacks = callbacks;
         this.worldManager = new WorldManager();
