@@ -1,9 +1,9 @@
-# 🤖 Rules for AI Agents - 812e8e54-66cb-4cee-b2c1-f6bd41d09a7e
+# 🤖 Rules for AI Agents - 665df7cc-8ee3-4b96-a73e-d209aa2defc2
 
 > Specific guidelines for AI agents working with this codebase.
 > Read this document **BEFORE** making any code changes.
 
-**Architecture:** Monolithic with potential for UI layering  
+**Architecture:** Monolithic with potential for UI-heavy structure  
 **Main Language:** TypeScript  
 **Framework:** Vite  
 **Last Updated:** February 2026
@@ -27,7 +27,7 @@
 
 ### About the Project
 
-This project follows a **Monolithic with potential for UI layering** architecture, 
+This project follows a **Monolithic with potential for UI-heavy structure** architecture, 
 implemented primarily in **TypeScript**.
 
 ### Detected Patterns
