@@ -1,8 +1,8 @@
-# Component Catalog - 812e8e54-66cb-4cee-b2c1-f6bd41d09a7e
+# Component Catalog - 665df7cc-8ee3-4b96-a73e-d209aa2defc2
 
 > Documentation of system components/modules.
 
-**Last Updated:** February 04, 2026
+**Last Updated:** February 05, 2026
 
 ---
 
@@ -12,7 +12,7 @@ File analyzed.
 
 ---
 
-### `vite.config.ts`
+### `src/ui/WorldManager.ts`
 
 File analyzed.
 

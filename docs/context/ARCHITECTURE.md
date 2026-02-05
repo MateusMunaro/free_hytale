@@ -1,16 +1,16 @@
-# Architectural Context - 812e8e54-66cb-4cee-b2c1-f6bd41d09a7e
+# Architectural Context - 665df7cc-8ee3-4b96-a73e-d209aa2defc2
 
 > Quick reference guide about the project architecture.
 
-**Architectural Pattern:** Monolithic with potential for UI layering  
-**Last Updated:** February 04, 2026
+**Architectural Pattern:** Monolithic with potential for UI-heavy structure  
+**Last Updated:** February 05, 2026
 
 ---
 
 ## Architectural Decisions
 
 
-The project follows a **Monolithic with potential for UI layering** architecture.
+The project follows a **Monolithic with potential for UI-heavy structure** architecture.
 
 Check diagrams at `/docs/charts/` for more details.
 
