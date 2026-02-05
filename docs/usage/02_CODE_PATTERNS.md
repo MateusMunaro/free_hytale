@@ -1,4 +1,4 @@
-# Guide: Code Patterns - 812e8e54-66cb-4cee-b2c1-f6bd41d09a7e
+# Guide: Code Patterns - 665df7cc-8ee3-4b96-a73e-d209aa2defc2
 
 > How to write code following project patterns.
 
