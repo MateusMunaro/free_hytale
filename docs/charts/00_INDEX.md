@@ -1,4 +1,4 @@
-# 📊 Visual Documentation - 812e8e54-66cb-4cee-b2c1-f6bd41d09a7e
+# 📊 Visual Documentation - 665df7cc-8ee3-4b96-a73e-d209aa2defc2
 
 > Diagrams and visual documentation for global project context.
 
@@ -31,9 +31,9 @@
 
 ## 🏗️ Quick Overview
 
-### Architecture: Monolithic with potential for UI layering
+### Architecture: Monolithic with potential for UI-heavy structure
 
-**Confidence:** 85%
+**Confidence:** 80%
 
 ### Main Stack
 ```
@@ -43,4 +43,4 @@ Vite
 
 ---
 
-*Last updated: February 04, 2026*
+*Last updated: February 05, 2026*
