@@ -1,0 +1,158 @@
+# ReadMe.LLM — src/inventory/
+
+> Machine-readable module documentation for `f7031eb8-16b4-4a03-98d6-ff1f8c506284`
+> Generated: 2026-03-26
+
+---
+
+## Module Summary
+
+- **Files:** 5
+- **Functions:** 60
+- **Classes:** 3
+- **Language:** TypeScript
+
+### Files
+
+- `CraftingSystem.ts`
+- `Inventory.ts`
+- `InventoryUI.ts`
+- `ItemTypes.ts`
+- `index.ts`
+
+---
+
+## Signatures
+
+### `CraftingSystem.ts`
+
+**class `CraftingSystem`**
+
+| Method | Params | Returns | Async |
+|--------|--------|---------|-------|
+| `constructor` | `inventory: Inventory` | `None` |  |
+| `getRecipes` | `` | `CraftingRecipe[]` |  |
+| `getAvailableRecipes` | `` | `CraftingRecipe[]` |  |
+| `recipe` | `` | `None` |  |
+| `canCraft` | `recipe: CraftingRecipe` | `boolean` |  |
+| `craft` | `recipe: CraftingRecipe` | `boolean` |  |
+| `removeItems` | `itemId: number, quantity: number` | `void` |  |
+| `getRecipeById` | `id: string` | `CraftingRecipe | undefined` |  |
+| `r` | `` | `None` |  |
+| `getRecipesByCategory` | `category: string` | `CraftingRecipe[]` |  |
+| `r` | `` | `None` |  |
+
+### `Inventory.ts`
+
+**class `Inventory`**
+
+| Method | Params | Returns | Async |
+|--------|--------|---------|-------|
+| `constructor` | `config: Partial<InventoryConfig> = {}` | `None` |  |
+| `addStartingItems` | `` | `void` |  |
+| `getSelectedSlot` | `` | `number` |  |
+| `setSelectedSlot` | `slot: number` | `void` |  |
+| `nextSlot` | `` | `void` |  |
+| `previousSlot` | `` | `void` |  |
+| `getSelectedItem` | `` | `ItemData | null` |  |
+| `getHotbar` | `` | `InventorySlot[]` |  |
+| `getMainInventory` | `` | `InventorySlot[]` |  |
+| `getItemForSlot` | `slot: InventorySlot` | `ItemData | null` |  |
+| `setHotbarSlot` | `index: number, itemId: number, quantity: number` | `boolean` |  |
+| `setMainSlot` | `index: number, itemId: number, quantity: number` | `boolean` |  |
+| `addItem` | `itemId: number, quantity: number` | `number` |  |
+| `useSelectedItem` | `amount: number = 1` | `boolean` |  |
+| `swapSlots` | `fromHotbar: boolean, fromIndex: number, toHotbar: boolean, toIndex: number` | `void` |  |
+| `clearSlot` | `isHotbar: boolean, index: number` | `void` |  |
+| `getConfig` | `` | `InventoryConfig` |  |
+| `hasSpaceFor` | `itemId: number, quantity: number` | `boolean` |  |
+| `countItem` | `itemId: number` | `number` |  |
+| `onChange` | `callback: () => void` | `void` |  |
+| `notifyChange` | `` | `void` |  |
+| `getAllItems` | `` | `ItemData[]` |  |
+| `getItemsByCategory` | `category: ItemCategory` | `ItemData[]` |  |
+| `item` | `` | `None` |  |
+
+### `InventoryUI.ts`
+
+**class `InventoryUI`**
+
+| Method | Params | Returns | Async |
+|--------|--------|---------|-------|
+| `constructor` | `inventory: Inventory` | `None` |  |
+| `createUI` | `` | `void` |  |
+| `HotbarHTML(): st` | `` | `ng {` |  |
+| `InventoryGridHTML(): st` | `` | `ng {` |  |
+| `SlotContent(item:` | `ItemData | null | undefined, quan, ty: number): str` | `ng {` |  |
+| `ventListeners(): vo` | `` | `{` |  |
+| `SlotMouseDown(e: Mo` | `seEvent): voi` | `{` |  |
+| `SlotMouseUp(e: Mo` | `seEvent): voi` | `{` |  |
+| `el` | `` | `None` |  |
+| `SlotHover(e: Mo` | `seEvent): voi` | `{` |  |
+| `oltip(item:` | `ItemData, quan, ty: number, x: n, ber, y: n, ber): voi` | `{` |  |
+| `oltip(): vo` | `` | `{` |  |
+| `egoryLabel(categ` | `ry: ItemCategory): str` | `ng {` |  |
+| ` {
+        if` | `` | `this.i` |  |
+| `d {
+        if` | `` | `this.i` |  |
+| `id {
+        if` | `` | `this.i` |  |
+| `      ` | `` | `eturn thi` |  |
+| `    //` | `` | `pdate` |  |
+| `id {
+        co` | `` | `t sele` |  |
+| `ean): void` | `{
+        if ` | `this.h` |  |
+| `     th` | `` | `.conta` |  |
+
+### `ItemTypes.ts`
+
+| Function | Params | Returns | Async |
+|----------|--------|---------|-------|
+| `createBlockItem` | `blockType: BlockType` | `ItemData` |  |
+| `turn IT` | `MS[id];
+}
+` | `export function isBloc` |  |
+| `item.catego` | `y === ItemCate` | `ory.BLOCK` |  |
+| `ta[] {
+    return ` | `bject.values(ITEMS).fi` | `ter(item =>` |  |
+
+---
+
+## Dependencies
+
+### This module imports from:
+- `CraftingSystem.ts` → `src/world/BlockTypes.ts`
+- `Inventory.ts` → `src/world/BlockTypes.ts`
+- `ItemTypes.ts` → `src/world/BlockTypes.ts`
+
+### Imported by:
+- `src/player/MiningSystem.ts` → `Inventory.ts`
+- `src/ui/HandDisplay.ts` → `Inventory.ts`
+- `src/player/MiningSystem.ts` → `ItemTypes.ts`
+- `src/ui/HandDisplay.ts` → `ItemTypes.ts`
+
+---
+
+## Module Structure
+
+```mermaid
+flowchart TB
+    subgraph src_inventory["src/inventory/"]
+        src_inventory_InventoryUI_ts["InventoryUI.ts (21F, 1C)"]
+        src_inventory_CraftingSystem_ts["CraftingSystem.ts (11F, 1C)"]
+        src_inventory_Inventory_ts["Inventory.ts (24F, 1C)"]
+        src_inventory_ItemTypes_ts["ItemTypes.ts (4F)"]
+        src_inventory_index_ts["index.ts"]
+        src_inventory_InventoryUI_ts --> src_inventory_Inventory_ts
+        src_inventory_InventoryUI_ts --> src_inventory_ItemTypes_ts
+        src_inventory_CraftingSystem_ts --> src_inventory_Inventory_ts
+        src_inventory_Inventory_ts --> src_inventory_ItemTypes_ts
+    end
+```
+
+---
+
+
+*Generated by Code-In Agent — 2026-03-26*
