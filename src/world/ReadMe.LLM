@@ -1,0 +1,154 @@
+# ReadMe.LLM — src/world/
+
+> Machine-readable module documentation for `f7031eb8-16b4-4a03-98d6-ff1f8c506284`
+> Generated: 2026-03-26
+
+---
+
+## Module Summary
+
+- **Files:** 4
+- **Functions:** 54
+- **Classes:** 3
+- **Language:** TypeScript
+
+### Files
+
+- `BlockTypes.ts`
+- `Chunk.ts`
+- `TerrainGenerator.ts`
+- `World.ts`
+
+---
+
+## Signatures
+
+### `BlockTypes.ts`
+
+| Function | Params | Returns | Async |
+|----------|--------|---------|-------|
+| `getBlock` | `type: BlockType` | `BlockData` |  |
+| `isBlockSolid` | `type: BlockType` | `boolean` |  |
+| `isBlockTransparent` | `type: BlockType` | `boolean` |  |
+| `isBlockLiquid` | `type: BlockType` | `boolean` |  |
+
+### `Chunk.ts`
+
+**class `Chunk`**
+
+| Method | Params | Returns | Async |
+|--------|--------|---------|-------|
+| `constructor` | `x: number, z: number, terrainGenerator: TerrainGenerator` | `None` |  |
+| `generate` | `` | `void` |  |
+| `placeVegetation` | `lx: number, lz: number, wx: number, wz: number` | `void` |  |
+| `placeTree` | `lx: number, wz: number, surfaceY: number` | `void` |  |
+| `getBlock` | `x: number, y: number, z: number` | `BlockType` |  |
+| `setBlock` | `x: number, y: number, z: number, type: BlockType` | `void` |  |
+| `createEmptyGeometry` | `` | `GeometryData` |  |
+| `addFace` | `geometry: GeometryData, face: typeof FACES.top, x: number, y: number, z: number` | `void` |  |
+| `buildMesh` | `` | `void` |  |
+| `addCrossBillboard` | `geometry: GeometryData, x: number, y: number, z: number` | `void` |  |
+| `createVegetationMesh` | `geometry: GeometryData, blockType: BlockType` | `THREE.Mesh` |  |
+| `shouldRenderFace` | `nx: number, ny: number, nz: number, currentBlock: BlockType, isWater: boolean` | `boolean` |  |
+| `createMesh` | `geometry: GeometryData, texture: THREE.Texture | undefined, blockType: BlockType, faceType: 'top' | 'side' | 'bottom' = 'side'` | `THREE.Mesh` |  |
+| `rebuildMesh` | `` | `void` |  |
+| `dispose` | `` | `void` |  |
+
+| Function | Params | Returns | Async |
+|----------|--------|---------|-------|
+| `isVegetationBlock` | `blockType: BlockType` | `boolean` |  |
+
+### `TerrainGenerator.ts`
+
+**class `TerrainGenerator`**
+
+| Method | Params | Returns | Async |
+|--------|--------|---------|-------|
+| `constructor` | `config: Partial<TerrainConfig> = {}` | `None` |  |
+| `generateChunkData` | `chunkX: number, chunkZ: number, chunkSize: number = 16` | `Uint8Array` |  |
+| `calculateColumnInfo` | `x: number, z: number` | `ColumnInfo` |  |
+| `determineBiome` | `temp: number, humidity: number, height: number, isOcean: boolean, isBeach: boolean` | `BiomeData` |  |
+| `determineBlock` | `x: number, y: number, z: number, column: ColumnInfo` | `BlockType` |  |
+| `isCave` | `x: number, y: number, z: number, surfaceHeight: number` | `boolean` |  |
+| `getSurfaceBlock` | `x: number, y: number, z: number, terrainHeight: number, biome: BiomeData` | `BlockType` |  |
+| `getUndergroundBlock` | `x: number, y: number, z: number` | `BlockType` |  |
+| `checkForOre` | `x: number, y: number, z: number` | `BlockType` |  |
+| `getHeight` | `worldX: number, worldZ: number` | `number` |  |
+| `getBiome` | `worldX: number, worldZ: number` | `string` |  |
+| `hasCave` | `worldX: number, worldY: number, worldZ: number` | `boolean` |  |
+| `getBlockAt` | `worldX: number, worldY: number, worldZ: number` | `BlockType` |  |
+| `shouldPlaceTree` | `worldX: number, worldZ: number` | `boolean` |  |
+| `shouldPlaceVegetation` | `worldX: number, worldZ: number` | `boolean` |  |
+| `getVegetationType` | `worldX: number, worldZ: number` | `BlockType` |  |
+| `getTreeHeight` | `` | `number` |  |
+| `getWaterLevel` | `` | `number` |  |
+| `getGrassVariation` | `worldX: number, worldZ: number` | `number` |  |
+
+### `World.ts`
+
+**class `World`**
+
+| Method | Params | Returns | Async |
+|--------|--------|---------|-------|
+| `constructor` | `scene: THREE.Scene, config: Partial<WorldConfig> = {}` | `None` |  |
+| `update` | `playerX: number, playerZ: number` | `void` |  |
+| `c` | `` | `None` |  |
+| `c` | `` | `None` |  |
+| `clearChunkCache` | `chunkKey: string` | `void` |  |
+| `getHeightAt` | `x: number, z: number` | `number` |  |
+| `getWaterLevel` | `` | `number` |  |
+| `getBiome` | `x: number, z: number` | `string` |  |
+| `getBlockAt` | `worldX: number, worldY: number, worldZ: number` | `BlockType` |  |
+| `isBlockSolid` | `worldX: number, worldY: number, worldZ: number` | `boolean` |  |
+| `getBlock` | `worldX: number, worldY: number, worldZ: number` | `BlockType` |  |
+| `setBlock` | `worldX: number, worldY: number, worldZ: number, blockType: BlockType` | `boolean` |  |
+| `rebuildChunk` | `chunk: Chunk` | `void` |  |
+| `dispose` | `` | `void` |  |
+| `getCacheStats` | `` | `None` |  |
+
+---
+
+## Dependencies
+
+### This module imports from:
+- `Chunk.ts` → `src/graphics/TextureManager.ts`
+- `Chunk.ts` → `src/utils/MaterialPool.ts`
+- `TerrainGenerator.ts` → `src/utils/noise.ts`
+- `World.ts` → `src/utils/LRUCache.ts`
+- `World.ts` → `src/utils/math.ts`
+
+### Imported by:
+- `src/graphics/TextureManager.ts` → `BlockTypes.ts`
+- `src/inventory/CraftingSystem.ts` → `BlockTypes.ts`
+- `src/inventory/Inventory.ts` → `BlockTypes.ts`
+- `src/inventory/ItemTypes.ts` → `BlockTypes.ts`
+- `src/player/MiningSystem.ts` → `BlockTypes.ts`
+- `src/utils/MaterialPool.ts` → `BlockTypes.ts`
+- `src/engine/Engine.ts` → `World.ts`
+- `src/player/MiningSystem.ts` → `World.ts`
+- `src/player/Player.ts` → `World.ts`
+
+---
+
+## Module Structure
+
+```mermaid
+flowchart TB
+    subgraph src_world["src/world/"]
+        src_world_World_ts["World.ts (15F, 1C)"]
+        src_world_TerrainGenerator_ts["TerrainGenerator.ts (19F, 1C)"]
+        src_world_BlockTypes_ts["BlockTypes.ts (4F)"]
+        src_world_Chunk_ts["Chunk.ts (16F, 1C)"]
+        src_world_World_ts --> src_world_Chunk_ts
+        src_world_World_ts --> src_world_TerrainGenerator_ts
+        src_world_World_ts --> src_world_BlockTypes_ts
+        src_world_TerrainGenerator_ts --> src_world_BlockTypes_ts
+        src_world_Chunk_ts --> src_world_BlockTypes_ts
+        src_world_Chunk_ts --> src_world_TerrainGenerator_ts
+    end
+```
+
+---
+
+
+*Generated by Code-In Agent — 2026-03-26*
