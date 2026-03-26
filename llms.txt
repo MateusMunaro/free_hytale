@@ -1,0 +1,61 @@
+# f7031eb8-16b4-4a03-98d6-ff1f8c506284
+
+> llms.txt — Machine-readable documentation index
+> Generated: 2026-03-26
+
+## Project Summary
+
+- Architecture: Engine-centric Monolith
+- Language: TypeScript + Vite
+- Type: cli
+- Files: 31 | Functions: 386 | Classes: 28
+- Stack: See repomap.txt
+
+## Documentation Map
+
+| Artifact | Path | Purpose |
+|----------|------|---------|
+| Behavioral Contract | [AGENTS.md](AGENTS.md) | Rules, commands, boundaries for AI agents |
+| Repository Map | [repomap.txt](repomap.txt) | AST-compressed symbol map of entire repo |
+| Module Doc | [src/ReadMe.LLM](src/ReadMe.LLM) | Signatures + I/O for `src/` |
+| Module Rules | [src/AGENTS.md](src/AGENTS.md) | Module-specific overrides |
+| Module Doc | [src/engine/ReadMe.LLM](src/engine/ReadMe.LLM) | Signatures + I/O for `src/engine/` |
+| Module Rules | [src/engine/AGENTS.md](src/engine/AGENTS.md) | Module-specific overrides |
+| Module Doc | [src/graphics/ReadMe.LLM](src/graphics/ReadMe.LLM) | Signatures + I/O for `src/graphics/` |
+| Module Rules | [src/graphics/AGENTS.md](src/graphics/AGENTS.md) | Module-specific overrides |
+| Module Doc | [src/inventory/ReadMe.LLM](src/inventory/ReadMe.LLM) | Signatures + I/O for `src/inventory/` |
+| Module Rules | [src/inventory/AGENTS.md](src/inventory/AGENTS.md) | Module-specific overrides |
+| Module Doc | [src/player/ReadMe.LLM](src/player/ReadMe.LLM) | Signatures + I/O for `src/player/` |
+| Module Rules | [src/player/AGENTS.md](src/player/AGENTS.md) | Module-specific overrides |
+| Module Doc | [src/ui/ReadMe.LLM](src/ui/ReadMe.LLM) | Signatures + I/O for `src/ui/` |
+| Module Rules | [src/ui/AGENTS.md](src/ui/AGENTS.md) | Module-specific overrides |
+| Module Doc | [src/utils/ReadMe.LLM](src/utils/ReadMe.LLM) | Signatures + I/O for `src/utils/` |
+| Module Rules | [src/utils/AGENTS.md](src/utils/AGENTS.md) | Module-specific overrides |
+| Module Doc | [src/world/ReadMe.LLM](src/world/ReadMe.LLM) | Signatures + I/O for `src/world/` |
+| Module Rules | [src/world/AGENTS.md](src/world/AGENTS.md) | Module-specific overrides |
+| SCIP Index | [_codein/scip_index.scip](_codein/scip_index.scip) | Compiler-precision symbol navigation |
+| TreeFrag | [_codein/treefrag.txt](_codein/treefrag.txt) | Hierarchical LOD representation |
+| Knowledge Graph | [_codein/knowledge_graph.json](_codein/knowledge_graph.json) | Enriched dependency graph |
+
+## Key Modules
+
+- `vite.config.ts/`
+- `src/`
+
+## Quick Reference
+
+### Entry Points
+- `vite.config.ts`
+- `src/main.ts`
+- `src/inventory/InventoryUI.ts`
+- `src/inventory/CraftingSystem.ts`
+- `src/inventory/index.ts`
+- `src/utils/PerformanceMetrics.ts`
+- `src/utils/ObjectPool.ts`
+
+### Build Commands
+```
+npm run dev  # dev
+npm run build  # build
+npm run preview  # preview
+```
