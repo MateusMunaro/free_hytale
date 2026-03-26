@@ -1,0 +1,257 @@
+# ReadMe.LLM — src/utils/
+
+> Machine-readable module documentation for `f7031eb8-16b4-4a03-98d6-ff1f8c506284`
+> Generated: 2026-03-26
+
+---
+
+## Module Summary
+
+- **Files:** 7
+- **Functions:** 100
+- **Classes:** 9
+- **Language:** TypeScript
+
+### Files
+
+- `LRUCache.ts`
+- `MaterialPool.ts`
+- `ObjectPool.ts`
+- `PerformanceMetrics.ts`
+- `Vector3Pool.ts`
+- `math.ts`
+- `noise.ts`
+
+---
+
+## Signatures
+
+### `LRUCache.ts`
+
+**class `RUCache<`**
+
+| Method | Params | Returns | Async |
+|--------|--------|---------|-------|
+| `onstructor(` | `axSize: number = 10000)` | `None` |  |
+| `t(k` | `y: K):` | `V | undefined {` |  |
+| `t(k` | `y: K, , lue: V):` | `void {` |  |
+| `ey:` | `K): bo` | `lean {` |  |
+| `e(key:` | `K): bo` | `lean {` |  |
+| `(): v` | `` | `d {` |  |
+| `): n` | `` | `ber {` |  |
+| `ts(): { ` | `` | `ze: number; hits: number; misses: number; hitRate: number } {` |  |
+| `yPrefix(prefix` | ` string): numb` | `r {` |  |
+| `ats(): voi` | `` | `{` |  |
+
+### `MaterialPool.ts`
+
+**class `rialPool {
+ `**
+
+| Method | Params | Returns | Async |
+|--------|--------|---------|-------|
+| `tructor() {` | `` | `None` |  |
+| `nstance(): ` | `` | `terialPool {` |  |
+| `alize(): v` | `` | `d {` |  |
+| `ckMaterial(
+    ` | `ype: BlockType,
+    , pe: 'top' | 'side' | 'bottom',
+    ` | `E.Material {` |  |
+| `tionMaterial(blockTyp` | `: BlockType): THREE.` | `aterial {` |  |
+| `erial(): THREE.M` | `` | `erial {` |  |
+| `{ blockM` | `` | `erials: number; vegetationMaterials: number; total: number } {
+        r` |  |
+| `id {
+  ` | `` | `th` |  |
+| `e` | `` | `None` |  |
+| `e` | `` | `None` |  |
+
+| Function | Params | Returns | Async |
+|----------|--------|---------|-------|
+| `ol(): MaterialP` | `` | `l {
+    return` |  |
+
+### `ObjectPool.ts`
+
+**class `ectPool<T>`**
+
+| Method | Params | Returns | Async |
+|--------|--------|---------|-------|
+| `structor(
+ ` | `tory: () => T,
+ , et: (obj: T) => void,
+ , tialSize: number = 10,
+ , Size: number = 100
+  ` | `None` |  |
+| `ire(): ` | `` | `{` |  |
+| `ase(obj` | ` T): v` | `id {` |  |
+| `(): ` | `` | `mber {` |  |
+
+**class `yPool<T> `**
+
+| Method | Params | Returns | Async |
+|--------|--------|---------|-------|
+| `tructor(ini` | `ialSize: number = 20, ma, ize: number = 100) {
+` | `None` |  |
+| `ire(): ` | `` | `] {` |  |
+| `ase(arr` | ` T[]): v` | `id {` |  |
+| `(): ` | `` | `mber {` |  |
+
+**class `etryDataPool {
+ `**
+
+| Method | Params | Returns | Async |
+|--------|--------|---------|-------|
+| `tructor() {` | `` | `None` |  |
+| `nstance(): ` | `` | `ometryDataPool {` |  |
+| `teEmpty(): ` | `` | `ometryData {` |  |
+| `ire(): ` | `` | `ometryData {` |  |
+| `ase(dat` | `: GeometryData): v` | `id {` |  |
+| `(): ` | `` | `mber {` |  |
+
+| Function | Params | Returns | Async |
+|----------|--------|---------|-------|
+| `eometryDataPool(): ` | `` | `ometryDataPool {` |  |
+
+### `PerformanceMetrics.ts`
+
+**class `formanceMetrics {
+`**
+
+| Method | Params | Returns | Async |
+|--------|--------|---------|-------|
+| `structor() ` | `` | `None` |  |
+| `Instance():` | `` | `erformanceMetrics {` |  |
+| `inFrame():` | `` | `oid {` |  |
+| `Frame():` | `` | `oid {` |  |
+| `FPS():` | `` | `umber {` |  |
+| `AverageFrameTime():` | `` | `umber {` |  |
+| `MinFrameTime():` | `` | `umber {` |  |
+| `MaxFrameTime():` | `` | `umber {` |  |
+| `rtTimer(na` | `e: string): ` | `oid {` |  |
+| `Timer(na` | `e: string): ` | `umber {` |  |
+| `TimerAverage(na` | `e: string): ` | `umber {` |  |
+| `TimerTotal(na` | `e: string): ` | `umber {` |  |
+| `rement(na` | `e: string, a, unt: number = 1): ` | `oid {` |  |
+| `Counter(na` | `e: string): ` | `umber {` |  |
+| `etCounters():` | `` | `oid {` |  |
+| `etTimers():` | `` | `oid {` |  |
+| `Report():` | `` | `bject {` |  |
+| `MemoryInfo():` | `` | `bject | null {` |  |
+| `Report():` | `` | `oid {` |  |
+| `et():` | `` | `oid {` |  |
+
+| Function | Params | Returns | Async |
+|----------|--------|---------|-------|
+| `Metrics():` | `` | `erformanceMetrics {` |  |
+
+### `Vector3Pool.ts`
+
+**class `3Pool {
+   `**
+
+| Method | Params | Returns | Async |
+|--------|--------|---------|-------|
+| `uctor() {
+ ` | `` | `None` |  |
+| `tance(): Ve` | `` | `or3Pool {` |  |
+| `(): THR` | `` | `.Vector3 {` |  |
+| `(vec: T` | `REE.Vector3): void` | `{` |  |
+| `any(...vecs` | ` THREE.Vector3[]): void ` | `` |  |
+| `ber ` | ` 0, y: number,  0, z: number,  0): THREE.Ve` | `tor3 {` |  |
+| ` { poole` | `` | `number; inUse: number } {` |  |
+
+| Function | Params | Returns | Async |
+|----------|--------|---------|-------|
+| `(): Vector3` | `` | `ol {
+    retu` |  |
+
+### `math.ts`
+
+| Function | Params | Returns | Async |
+|----------|--------|---------|-------|
+| `clamp` | `value: number, min: number, max: number` | `number` |  |
+| `lerp` | `a: number, b: number, t: number` | `number` |  |
+| `smoothstep` | `edge0: number, edge1: number, x: number` | `number` |  |
+| `inverseLerp` | `a: number, b: number, value: number` | `number` |  |
+| `remap` | `value: number, inMin: number, inMax: number, outMin: number, outMax: number` | `number` |  |
+| `mod` | `n: number, m: number` | `number` |  |
+| `hash` | `x: number, y: number, z: number = 0` | `number` |  |
+| `randomFromHash` | `hash: number` | `number` |  |
+| `distance2D` | `x1: number, y1: number, x2: number, y2: number` | `number` |  |
+| `distance3D` | `x1: number, y1: number, z1: number, x2: number, y2: number` | `number` |  |
+| `worldToChunk` | `worldX: number, worldZ: number, chunkSize: number` | `{ x: number; z: number }` |  |
+| `chunkToWorld` | `chunkX: number, chunkZ: number, chunkSize: number` | `{ x: number; z: number }` |  |
+| `frustumContainsPoint` | `frustum: THREE.Frustum, point: THREE.Vector3` | `boolean` |  |
+| `createChunkKey` | `x: number, z: number` | `string` |  |
+| `parseChunkKey` | `key: string` | `{ x: number; z: number }` |  |
+
+### `noise.ts`
+
+**class `SimplexNoise`**
+
+| Method | Params | Returns | Async |
+|--------|--------|---------|-------|
+| `constructor` | `seed: number = Math.random() * 10000` | `None` |  |
+| `dot2` | `g: number[], x: number, y: number` | `number` |  |
+| `dot3` | `g: number[], x: number, y: number, z: number` | `number` |  |
+| `noise2D` | `x: number, y: number` | `number` |  |
+| `noise3D` | `x: number, y: number, z: number` | `number` |  |
+| `fbm` | `x: number, y: number, octaves: number = 6, lacunarity: number = 2, persistence: number = 0.5` | `number` |  |
+| `fbm3D` | `x: number, y: number, z: number, octaves: number = 4, lacunarity: number = 2` | `number` |  |
+
+**class `NoiseGenerator`**
+
+| Method | Params | Returns | Async |
+|--------|--------|---------|-------|
+| `constructor` | `seed: number | string` | `None` |  |
+| `hashString` | `str: string` | `number` |  |
+| `getFBM2D` | `x: number, z: number, octaves: number, persistence: number, lacunarity: number` | `number` |  |
+| `getNoise3D` | `x: number, y: number, z: number, scale: number` | `number` |  |
+| `getFBM3D` | `x: number, y: number, z: number, octaves: number, persistence: number` | `number` |  |
+| `getRidgeNoise2D` | `x: number, z: number, octaves: number, persistence: number, lacunarity: number` | `number` |  |
+| `getCaveNoise` | `x: number, y: number, z: number, scale: number` | `number` |  |
+| `getTemperature` | `x: number, z: number` | `number` |  |
+| `getHumidity` | `x: number, z: number` | `number` |  |
+| `getContinentalness` | `x: number, z: number` | `number` |  |
+| `getErosion` | `x: number, z: number` | `number` |  |
+| `getPeaksAndValleys` | `x: number, z: number` | `number` |  |
+| `getWeirdness` | `x: number, z: number` | `number` |  |
+
+---
+
+## Dependencies
+
+### This module imports from:
+- `MaterialPool.ts` → `src/graphics/TextureManager.ts`
+- `MaterialPool.ts` → `src/world/BlockTypes.ts`
+
+### Imported by:
+- `src/world/World.ts` → `LRUCache.ts`
+- `src/world/Chunk.ts` → `MaterialPool.ts`
+- `src/player/MiningSystem.ts` → `Vector3Pool.ts`
+- `src/player/Camera.ts` → `math.ts`
+- `src/world/World.ts` → `math.ts`
+- `src/world/TerrainGenerator.ts` → `noise.ts`
+
+---
+
+## Module Structure
+
+```mermaid
+flowchart TB
+    subgraph src_utils["src/utils/"]
+        src_utils_LRUCache_ts["LRUCache.ts (10F, 1C)"]
+        src_utils_MaterialPool_ts["MaterialPool.ts (11F, 1C)"]
+        src_utils_PerformanceMetrics_t["PerformanceMetrics.ts (21F, 1C)"]
+        src_utils_noise_ts["noise.ts (20F, 2C)"]
+        src_utils_ObjectPool_ts["ObjectPool.ts (15F, 3C)"]
+        src_utils_math_ts["math.ts (15F)"]
+        src_utils_Vector3Pool_ts["Vector3Pool.ts (8F, 1C)"]
+    end
+```
+
+---
+
+
+*Generated by Code-In Agent — 2026-03-26*
