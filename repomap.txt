@@ -1,0 +1,509 @@
+# repomap.txt — f7031eb8-16b4-4a03-98d6-ff1f8c506284
+# AST-compressed repository map (symbols only, no bodies)
+# Generated: 2026-03-26
+# Language: TypeScript
+#
+
+# Stats: 31 files, 372 functions, 28 classes
+#
+
+├── vite.config.ts  (17L)
+
+src/
+  ├── main.ts  (36L)
+  │   async def main()
+
+src/engine/
+  ├── Engine.ts  (356L)
+  │   class Engine
+  │     def constructor(canvas: HTMLCanvasElement)
+  │     async def initializeGameSystems(worldData: WorldData) -> Promise<void>
+  │     def setupStartListener() -> void
+  │     def setupEscapeListener() -> void
+  │     async def startGame(worldData: WorldData) -> Promise<void>
+  │     def resolve()
+  │     def resolve()
+  │     def urnToMenu():() -> oid {
+  │     def poseGameSystems():() -> oid {
+  │     async def tialize():() -> romise<void> {
+  │     def ): vo() -> {
+  │     def (): vo() -> {
+  │     def (): vo() -> {
+  │     def : vo() -> {
+  │     def e(): vo() -> {
+  ├── Renderer.ts  (94L)
+  │   class Renderer
+  │     def constructor(canvas: HTMLCanvasElement, config: Partial<RendererConfig> = {})
+  │     def handleResize() -> void
+  │     def render(camera: THREE.PerspectiveCamera) -> void
+  │     def getAspect() -> number
+  │     def dispose() -> void
+
+src/graphics/
+  ├── Sky.ts  (246L)
+  │   class Sky
+  │     def constructor(scene: THREE.Scene)
+  │     def updateSunPosition(playerPosition: THREE.Vector3) -> void
+  │     def setTimeOfDay(time: number) -> void
+  │     def dispose() -> void
+  ├── TextureManager.ts  (994L)
+  │   class TextureManager
+  │     def constructor()
+  │     def generateAllTextures() -> void
+  │     def generateGrassVariations() -> void
+  │     def createCanvas() -> { canvas: HTMLCanvasElement; ctx: CanvasRenderingContext2D }
+  │     def canvasToTexture(canvas: HTMLCanvasElement) -> THREE.Texture
+  │     def addPerlinNoise(ctx: CanvasRenderingContext2D, intensity: number = 0.1, scale: number = 1) -> void
+  │     def addColorVariation(ctx: CanvasRenderingContext2D, hueRange: number = 10, satRange: number = 0.1, lightRange: number = 0.1) -> void
+  │     def hue2rgb(p: number, q: number, t: number)
+  │     def drawGrassBlades(ctx: CanvasRenderingContext2D, density: number = 150) -> void
+  │     def createGrassVariationTexture(variation: number) -> THREE.Texture
+  │     def createGrassTextures() -> TextureSet
+  │     def createDirtTextures() -> TextureSet
+  │     def createDirt()
+  │     def createStoneTextures() -> TextureSet
+  │     def createStone()
+  │     def createSandTextures() -> TextureSet
+  │     def createSand()
+  │     def createWoodTextures() -> TextureSet
+  │     def createRings()
+  │     def createBark()
+  │     def createLeavesTextures() -> TextureSet
+  │     def createLeaves()
+  │     def createSnowTextures() -> TextureSet
+  │     def createSnow()
+  │     def createBedrockTextures() -> TextureSet
+  │     def createBedrock()
+  │     def createWaterTextures() -> TextureSet
+  │     def createWater()
+  │     def createTallGrassTextures() -> TextureSet
+  │     def createTallGrass()
+  │     def createFernTextures() -> TextureSet
+  │     def createFern()
+  │     def createDeadBushTextures() -> TextureSet
+  │     def createDeadBush()
+  │     def drawBranch(x: number, y: number, angle: number, length: number)
+  │     def createFlowerTextures(petalColor: number, stemColor: number) -> TextureSet
+  │     def createFlower()
+  │     def createMushroomTextures(capColor: number, spotColor: number) -> TextureSet
+  │     def createMushroom()
+  │     def getTextures(blockType: BlockType) -> TextureSet | undefined
+  │     def getGrassVariation(worldX: number, worldZ: number) -> THREE.Texture
+  │     def dispose() -> void
+  │   def getTextureManager() -> TextureManager
+
+src/inventory/
+  ├── CraftingSystem.ts  (205L)
+  │   class CraftingSystem
+  │     def constructor(inventory: Inventory)
+  │     def getRecipes() -> CraftingRecipe[]
+  │     def getAvailableRecipes() -> CraftingRecipe[]
+  │     def recipe()
+  │     def canCraft(recipe: CraftingRecipe) -> boolean
+  │     def craft(recipe: CraftingRecipe) -> boolean
+  │     def removeItems(itemId: number, quantity: number) -> void
+  │     def getRecipeById(id: string) -> CraftingRecipe | undefined
+  │     def r()
+  │     def getRecipesByCategory(category: string) -> CraftingRecipe[]
+  │     def r()
+  ├── Inventory.ts  (348L)
+  │   class Inventory
+  │     def constructor(config: Partial<InventoryConfig> = {})
+  │     def addStartingItems() -> void
+  │     def getSelectedSlot() -> number
+  │     def setSelectedSlot(slot: number) -> void
+  │     def nextSlot() -> void
+  │     def previousSlot() -> void
+  │     def getSelectedItem() -> ItemData | null
+  │     def getHotbar() -> InventorySlot[]
+  │     def getMainInventory() -> InventorySlot[]
+  │     def getItemForSlot(slot: InventorySlot) -> ItemData | null
+  │     def setHotbarSlot(index: number, itemId: number, quantity: number) -> boolean
+  │     def setMainSlot(index: number, itemId: number, quantity: number) -> boolean
+  │     def addItem(itemId: number, quantity: number) -> number
+  │     def useSelectedItem(amount: number = 1) -> boolean
+  │     def swapSlots(fromHotbar: boolean, fromIndex: number, toHotbar: boolean, toIndex: number) -> void
+  │     def clearSlot(isHotbar: boolean, index: number) -> void
+  │     def getConfig() -> InventoryConfig
+  │     def hasSpaceFor(itemId: number, quantity: number) -> boolean
+  │     def countItem(itemId: number) -> number
+  │     def onChange(callback: () => void) -> void
+  │     def notifyChange() -> void
+  │     def getAllItems() -> ItemData[]
+  │     def getItemsByCategory(category: ItemCategory) -> ItemData[]
+  │     def item()
+  ├── InventoryUI.ts  (323L)
+  │   class InventoryUI
+  │     def constructor(inventory: Inventory)
+  │     def createUI() -> void
+  │     def HotbarHTML(): st() -> ng {
+  │     def InventoryGridHTML(): st() -> ng {
+  │     def SlotContent(item:(ItemData | null | undefined, quan, ty: number): str) -> ng {
+  │     def ventListeners(): vo() -> {
+  │     def SlotMouseDown(e: Mo(seEvent): voi) -> {
+  │     def SlotMouseUp(e: Mo(seEvent): voi) -> {
+  │     def el()
+  │     def SlotHover(e: Mo(seEvent): voi) -> {
+  │     def oltip(item:(ItemData, quan, ty: number, x: n, ber, y: n, ber): voi) -> {
+  │     def oltip(): vo() -> {
+  │     def egoryLabel(categ(ry: ItemCategory): str) -> ng {
+  │     def  {
+        if() -> this.i
+  │     def d {
+        if() -> this.i
+  │     def id {
+        if() -> this.i
+  │     def       () -> eturn thi
+  │     def     //() -> pdate
+  │     def id {
+        co() -> t sele
+  │     def ean): void({
+        if ) -> this.h
+  │     def      th() -> .conta
+  ├── ItemTypes.ts  (195L)
+  │   def createBlockItem(blockType: BlockType) -> ItemData
+  │   def turn IT(MS[id];
+}
+) -> export function isBloc
+  │   def item.catego(y === ItemCate) -> ory.BLOCK
+  │   def ta[] {
+    return (bject.values(ITEMS).fi) -> ter(item =>
+  ├── index.ts  (16L)
+
+src/player/
+  ├── Camera.ts  (56L)
+  │   class Camera
+  │     def constructor(aspect: number)
+  │     def rotate(deltaX: number, deltaY: number) -> void
+  │     def setPosition(x: number, y: number, z: number) -> void
+  │     def getForward() -> THREE.Vector3
+  │     def getRight() -> THREE.Vector3
+  │     def getYaw() -> number
+  │     def resize(aspect: number) -> void
+  ├── InputManager.ts  (213L)
+  │   class InputManager
+  │     def constructor(canvas: HTMLCanvasElement)
+  │     def setupListeners() -> void
+  │     def handleKeyDown(event: KeyboardEvent) -> void
+  │     def handleKeyUp(event: KeyboardEvent) -> void
+  │     def updateKeyState(code: string, pressed: boolean) -> void
+  │     def handleMouseMove(event: MouseEvent) -> void
+  │     def handleMouseWheel(event: WheelEvent) -> void
+  │     def handleMouseDown(event: MouseEvent) -> void
+  │     def handleMouseUp(event: MouseEvent) -> void
+  │     def requestPointerLock() -> void
+  │     def exitPointerLock() -> void
+  │     def setPointerLockCallback(callback: () => void) -> void
+  │     def getState() -> InputState
+  │     def isLocked() -> boolean
+  │     def resetMouseDelta() -> void
+  │     def resetInventoryInputs() -> void
+  │     def dispose() -> void
+  ├── MiningSystem.ts  (424L)
+  │   class MiningSystem
+  │     def constructor(world: World, inventory: Inventory, camera: THREE.Camera)
+  │     def setCamera(camera: THREE.Camera) -> void
+  │     def getTargetBlock() -> { x: number; y: number; z: number; face: THREE.Vector3 } | null
+  │     def startBreaking() -> void
+  │     def updateBreaking(deltaTime: number) -> void
+  │     def cb()
+  │     def stopBreaking() -> void
+  │     def cb()
+  │     def breakBlock() -> void
+  │     def cb()
+  │     def calculateBreakTime(blockType: BlockType) -> number
+  │     def getDrops(blockType: BlockType) -> { itemId: number; quantity: number }[]
+  │     def placeBlock() -> boolean
+  │     def getBreakProgress() -> number
+  │     def isCurrentlyBreaking() -> boolean
+  │     def onBreakProgress(callback: (progress: number) => void) -> void
+  │     def onBlockBroken(callback: (x: number, y: number, z: number, drops: { itemId: number; quantity: number }[]) => void) -> void
+  ├── Player.ts  (348L)
+  │   class Player
+  │     def constructor(inputManager: InputManager, world: World, aspect: number, config: Partial<PlayerConfig> = {})
+  │     def spawnAtSurface() -> void
+  │     def update(deltaTime: number) -> void
+  │     def getPlayerAABB(x: number, y: number, z: number) -> AABB
+  │     def getBlockAABB(bx: number, by: number, bz: number) -> AABB
+  │     def aabbIntersects(a: AABB, b: AABB) -> boolean
+  │     def getCollidingBlocks(aabb: AABB) -> Array<{ x: number; y: number; z: number }>
+  │     def moveWithCollision(deltaTime: number) -> void
+  │     def resolveCollisionX() -> void
+  │     def resolveCollisionZ() -> void
+  │     def resolveCollisionY() -> void
+  │     def tryAutoStep() -> void
+  │     def getPosition() -> THREE.Vector3
+  │     def setPosition(x: number, y: number, z: number) -> void
+  │     def resize(aspect: number) -> void
+
+src/ui/
+  ├── BreakIndicator.ts  (74L)
+  │   class BreakIndicator
+  │     def constructor()
+  │     def createIndicator() -> void
+  │     def setProgress(progress: number) -> void
+  │     def hide() -> void
+  │     def dispose() -> void
+  ├── HUD.ts  (67L)
+  │   class HUD
+  │     def constructor()
+  │     def showLoading() -> void
+  │     def showStartScreen() -> void
+  │     def showGame() -> void
+  │     def updateDebugInfo(data: {
+        fps: number;
+        x: number;
+        y: number;
+        z: number;
+        chunksLoaded: number;
+        chunksRendered: number;
+    }) -> void
+  ├── HandDisplay.ts  (126L)
+  │   class HandDisplay
+  │     def constructor(inventory: Inventory)
+  │     def createDisplay() -> void
+  │     def updateHand() -> void
+  │     def swing() -> void
+  │     def startMining() -> void
+  │     def stopMining() -> void
+  │     def setVisible(visible: boolean) -> void
+  │     def dispose() -> void
+  ├── MainMenu.ts  (434L)
+  │   class MainMenu
+  │     def currentScreen() -> MenuScreen
+  │     def constructor(callbacks: MenuCallbacks)
+  │     def createContainer() -> HTMLElement
+  │     def show() -> void
+  │     def hide() -> void
+  │     def isVisible() -> boolean
+  │     def clearContainer() -> void
+  │     def showMainMenu() -> void
+  │     def : void {
+     () -> this.
+  │     def WorldData): HTM(Element {
+      ) -> const card =
+  │     def  string {
+  (     const ic) -> ns: Reco
+  │     def const modal = docu(ent.createElemen) -> ('div'
+  │     def n = 'create-world';()
+  │     def holder: string):(HTMLElement {,        con,  group = doc, ent.createElement(') -> iv');
+  │     def  for (let ( = 0; i < s) -> r.length
+  │     def  'settings';
+        th() -> .clear
+  │     def : HTMLElement {
+(       const, utton = docu, nt.createElement('button');
+    ,   button.className ) -> `menu-button
+  ├── WorldManager.ts  (112L)
+  │   class WorldManager
+  │     def constructor()
+  │     def loadFromStorage() -> void
+  │     def world()
+  │     def saveToStorage() -> void
+  │     def createWorld(name: string) -> WorldData
+  │     def getWorld(id: string) -> WorldData | undefined
+  │     def getAllWorlds() -> WorldData[]
+  │     def updateWorld(id: string, updates: Partial<WorldData>) -> void
+  │     def updateLastPlayed(id: string) -> void
+  │     def savePlayerPosition(id: string, position: { x: number; y: number; z: number }) -> void
+  │     def saveModifiedBlock(id: string, blockKey: string, blockType: number) -> void
+  │     def deleteWorld(id: string) -> boolean
+  │     def generateId() -> string
+
+src/utils/
+  ├── LRUCache.ts  (122L)
+  │   class RUCache<
+  │     def onstructor((axSize: number = 10000))
+  │     def t(k(y: K):) -> V | undefined {
+  │     def t(k(y: K, , lue: V):) -> void {
+  │     def ey:(K): bo) -> lean {
+  │     def e(key:(K): bo) -> lean {
+  │     def (): v() -> d {
+  │     def ): n() -> ber {
+  │     def ts(): { () -> ze: number; hits: number; misses: number; hitRate: number } {
+  │     def yPrefix(prefix( string): numb) -> r {
+  │     def ats(): voi() -> {
+  ├── MaterialPool.ts  (142L)
+  │   class rialPool {
+ 
+  │     def tructor() {()
+  │     def nstance(): () -> terialPool {
+  │     def alize(): v() -> d {
+  │     def ckMaterial(
+    (ype: BlockType,
+    , pe: 'top' | 'side' | 'bottom',
+    ) -> E.Material {
+  │     def tionMaterial(blockTyp(: BlockType): THREE.) -> aterial {
+  │     def erial(): THREE.M() -> erial {
+  │     def { blockM() -> erials: number; vegetationMaterials: number; total: number } {
+        r
+  │     def id {
+  () -> th
+  │     def e()
+  │     def e()
+  │   def ol(): MaterialP() -> l {
+    return
+  ├── ObjectPool.ts  (148L)
+  │   class ectPool<T>
+  │     def structor(
+ (tory: () => T,
+ , et: (obj: T) => void,
+ , tialSize: number = 10,
+ , Size: number = 100
+  )
+  │     def ire(): () -> {
+  │     def ase(obj( T): v) -> id {
+  │     def (): () -> mber {
+  │   class yPool<T> 
+  │     def tructor(ini(ialSize: number = 20, ma, ize: number = 100) {
+)
+  │     def ire(): () -> ] {
+  │     def ase(arr( T[]): v) -> id {
+  │     def (): () -> mber {
+  │   class etryDataPool {
+ 
+  │     def tructor() {()
+  │     def nstance(): () -> ometryDataPool {
+  │     def teEmpty(): () -> ometryData {
+  │     def ire(): () -> ometryData {
+  │     def ase(dat(: GeometryData): v) -> id {
+  │     def (): () -> mber {
+  │   def eometryDataPool(): () -> ometryDataPool {
+  ├── PerformanceMetrics.ts  (170L)
+  │   class formanceMetrics {
+
+  │     def structor() ()
+  │     def Instance():() -> erformanceMetrics {
+  │     def inFrame():() -> oid {
+  │     def Frame():() -> oid {
+  │     def FPS():() -> umber {
+  │     def AverageFrameTime():() -> umber {
+  │     def MinFrameTime():() -> umber {
+  │     def MaxFrameTime():() -> umber {
+  │     def rtTimer(na(e: string): ) -> oid {
+  │     def Timer(na(e: string): ) -> umber {
+  │     def TimerAverage(na(e: string): ) -> umber {
+  │     def TimerTotal(na(e: string): ) -> umber {
+  │     def rement(na(e: string, a, unt: number = 1): ) -> oid {
+  │     def Counter(na(e: string): ) -> umber {
+  │     def etCounters():() -> oid {
+  │     def etTimers():() -> oid {
+  │     def Report():() -> bject {
+  │     def MemoryInfo():() -> bject | null {
+  │     def Report():() -> oid {
+  │     def et():() -> oid {
+  │   def Metrics():() -> erformanceMetrics {
+  ├── Vector3Pool.ts  (86L)
+  │   class 3Pool {
+   
+  │     def uctor() {
+ ()
+  │     def tance(): Ve() -> or3Pool {
+  │     def (): THR() -> .Vector3 {
+  │     def (vec: T(REE.Vector3): void) -> {
+  │     def any(...vecs( THREE.Vector3[]): void )
+  │     def ber ( 0, y: number,  0, z: number,  0): THREE.Ve) -> tor3 {
+  │     def  { poole() -> number; inUse: number } {
+  │   def (): Vector3() -> ol {
+    retu
+  ├── math.ts  (77L)
+  │   def clamp(value: number, min: number, max: number) -> number
+  │   def lerp(a: number, b: number, t: number) -> number
+  │   def smoothstep(edge0: number, edge1: number, x: number) -> number
+  │   def inverseLerp(a: number, b: number, value: number) -> number
+  │   def remap(value: number, inMin: number, inMax: number, outMin: number) -> number
+  │   def mod(n: number, m: number) -> number
+  │   def hash(x: number, y: number, z: number = 0) -> number
+  │   def randomFromHash(hash: number) -> number
+  │   def distance2D(x1: number, y1: number, x2: number, y2: number) -> number
+  │   def distance3D(x1: number, y1: number, z1: number, x2: number) -> number
+  │   def worldToChunk(worldX: number, worldZ: number, chunkSize: number) -> { x: number; z: number }
+  │   def chunkToWorld(chunkX: number, chunkZ: number, chunkSize: number) -> { x: number; z: number }
+  │   def frustumContainsPoint(frustum: THREE.Frustum, point: THREE.Vector3) -> boolean
+  │   def createChunkKey(x: number, z: number) -> string
+  │   def parseChunkKey(key: string) -> { x: number; z: number }
+  ├── noise.ts  (395L)
+  │   class SimplexNoise
+  │     def constructor(seed: number = Math.random() * 10000)
+  │     def dot2(g: number[], x: number, y: number) -> number
+  │     def dot3(g: number[], x: number, y: number, z: number) -> number
+  │     def noise2D(x: number, y: number) -> number
+  │     def noise3D(x: number, y: number, z: number) -> number
+  │     def fbm(x: number, y: number, octaves: number = 6, lacunarity: number = 2) -> number
+  │     def fbm3D(x: number, y: number, z: number, octaves: number = 4) -> number
+  │   class NoiseGenerator
+  │     def constructor(seed: number | string)
+  │     def hashString(str: string) -> number
+  │     def getFBM2D(x: number, z: number, octaves: number, persistence: number) -> number
+  │     def getNoise3D(x: number, y: number, z: number, scale: number) -> number
+  │     def getFBM3D(x: number, y: number, z: number, octaves: number) -> number
+  │     def getRidgeNoise2D(x: number, z: number, octaves: number, persistence: number) -> number
+  │     def getCaveNoise(x: number, y: number, z: number, scale: number) -> number
+  │     def getTemperature(x: number, z: number) -> number
+  │     def getHumidity(x: number, z: number) -> number
+  │     def getContinentalness(x: number, z: number) -> number
+  │     def getErosion(x: number, z: number) -> number
+  │     def getPeaksAndValleys(x: number, z: number) -> number
+  │     def getWeirdness(x: number, z: number) -> number
+
+src/world/
+  ├── BlockTypes.ts  (397L)
+  │   def getBlock(type: BlockType) -> BlockData
+  │   def isBlockSolid(type: BlockType) -> boolean
+  │   def isBlockTransparent(type: BlockType) -> boolean
+  │   def isBlockLiquid(type: BlockType) -> boolean
+  ├── Chunk.ts  (568L)
+  │   class Chunk
+  │     def constructor(x: number, z: number, terrainGenerator: TerrainGenerator)
+  │     def generate() -> void
+  │     def placeVegetation(lx: number, lz: number, wx: number, wz: number) -> void
+  │     def placeTree(lx: number, wz: number, surfaceY: number) -> void
+  │     def getBlock(x: number, y: number, z: number) -> BlockType
+  │     def setBlock(x: number, y: number, z: number, type: BlockType) -> void
+  │     def createEmptyGeometry() -> GeometryData
+  │     def addFace(geometry: GeometryData, face: typeof FACES.top, x: number, y: number) -> void
+  │     def buildMesh() -> void
+  │     def addCrossBillboard(geometry: GeometryData, x: number, y: number, z: number) -> void
+  │     def createVegetationMesh(geometry: GeometryData, blockType: BlockType) -> THREE.Mesh
+  │     def shouldRenderFace(nx: number, ny: number, nz: number, currentBlock: BlockType) -> boolean
+  │     def createMesh(geometry: GeometryData, texture: THREE.Texture | undefined, blockType: BlockType, faceType: 'top' | 'side' | 'bottom' = 'side') -> THREE.Mesh
+  │     def rebuildMesh() -> void
+  │     def dispose() -> void
+  │   def isVegetationBlock(blockType: BlockType) -> boolean
+  ├── TerrainGenerator.ts  (701L)
+  │   class TerrainGenerator
+  │     def constructor(config: Partial<TerrainConfig> = {})
+  │     def generateChunkData(chunkX: number, chunkZ: number, chunkSize: number = 16) -> Uint8Array
+  │     def calculateColumnInfo(x: number, z: number) -> ColumnInfo
+  │     def determineBiome(temp: number, humidity: number, height: number, isOcean: boolean) -> BiomeData
+  │     def determineBlock(x: number, y: number, z: number, column: ColumnInfo) -> BlockType
+  │     def isCave(x: number, y: number, z: number, surfaceHeight: number) -> boolean
+  │     def getSurfaceBlock(x: number, y: number, z: number, terrainHeight: number) -> BlockType
+  │     def getUndergroundBlock(x: number, y: number, z: number) -> BlockType
+  │     def checkForOre(x: number, y: number, z: number) -> BlockType
+  │     def getHeight(worldX: number, worldZ: number) -> number
+  │     def getBiome(worldX: number, worldZ: number) -> string
+  │     def hasCave(worldX: number, worldY: number, worldZ: number) -> boolean
+  │     def getBlockAt(worldX: number, worldY: number, worldZ: number) -> BlockType
+  │     def shouldPlaceTree(worldX: number, worldZ: number) -> boolean
+  │     def shouldPlaceVegetation(worldX: number, worldZ: number) -> boolean
+  │     def getVegetationType(worldX: number, worldZ: number) -> BlockType
+  │     def getTreeHeight() -> number
+  │     def getWaterLevel() -> number
+  │     def getGrassVariation(worldX: number, worldZ: number) -> number
+  ├── World.ts  (270L)
+  │   class World
+  │     def constructor(scene: THREE.Scene, config: Partial<WorldConfig> = {})
+  │     def update(playerX: number, playerZ: number) -> void
+  │     def c()
+  │     def c()
+  │     def clearChunkCache(chunkKey: string) -> void
+  │     def getHeightAt(x: number, z: number) -> number
+  │     def getWaterLevel() -> number
+  │     def getBiome(x: number, z: number) -> string
+  │     def getBlockAt(worldX: number, worldY: number, worldZ: number) -> BlockType
+  │     def isBlockSolid(worldX: number, worldY: number, worldZ: number) -> boolean
+  │     def getBlock(worldX: number, worldY: number, worldZ: number) -> BlockType
+  │     def setBlock(worldX: number, worldY: number, worldZ: number, blockType: BlockType) -> boolean
+  │     def rebuildChunk(chunk: Chunk) -> void
+  │     def dispose() -> void
+  │     def getCacheStats()
